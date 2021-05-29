@@ -1,0 +1,153 @@
+.submenu1 {
+  background: $light-color;
+  box-shadow: var(--dark-shadow);
+  position: absolute;
+  top: 6.7rem;
+  left: 0;
+  z-index: 3;
+  padding: 0 1rem;
+
+  // *** Horizontal Scrollable Menu
+  width: 100vw;
+  overflow: auto;
+  white-space: nowrap;
+
+  ol {
+    display: flex;
+    margin: 0 1rem;
+
+    li {
+      display: inline-block;
+      margin-right: 30px;
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: $font-size;
+        font-weight: bold;
+        padding: 2rem 0 5px;
+        border-bottom: 2px solid $light-color;
+
+        &:hover {
+          color: $green;
+        }
+
+        &.active {
+          color: $green;
+          border-bottom: 2px solid $green;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      display: inline-block;
+      padding: 2rem 0 3rem;
+
+      .house {
+        color: $dark-color;
+        font-size: $font-size;
+        margin: 0 1rem;
+        display: block;
+        position: relative;
+
+        img {
+          width: 300px;
+        }
+
+        .house-subtitle {
+          position: absolute;
+          top: 1.5rem;
+          left: 1.5rem;
+          background: $dark-color;
+          color: $light-color;
+
+          p {
+            padding: 5px 10px;
+            font-size: $font-size;
+          }
+        }
+
+        .house-info {
+          position: absolute;
+          bottom: 7px;
+          left: 0;
+          width: 100%;
+          height: auto;
+          padding: 20px;
+          background: rgb(0, 0, 0);
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+
+          h3 {
+            padding: 0;
+            font-size: 2.2rem;
+            font-family: $secondary-font;
+            color: $light-color;
+          }
+
+          h4 {
+            padding: 0;
+            font-size: 1.1rem;
+            font-family: $secondary-font;
+            color: $light-color;
+          }
+
+          h5 {
+            padding: 0;
+            font-size: 0.9rem;
+            color: $orange;
+            margin-top: 5px;
+          }
+
+          a {
+            background: $orange;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: bold;
+            color: $light-color;
+            margin: 10px 0 0;
+
+            &:hover {
+              background: darken($color: $orange, $amount: 10);
+            }
+
+            img {
+              width: 10px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .download {
+    position: fixed;
+    right: 2.1rem;
+    top: 8.2rem;
+
+    button {
+      font-size: $font-size;
+      font-weight: bold;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $dark-color;
+
+      &:hover {
+        color: $green;
+        border-bottom: 1px solid $green;
+      }
+    }
+  }
+}

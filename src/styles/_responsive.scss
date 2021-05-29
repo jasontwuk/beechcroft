@@ -1,0 +1,160 @@
+/* 1200px and below */
+@media only screen and (max-width: 1200px) {
+  // *** submenu2
+  .submenu2 {
+    top: 4.9rem;
+  }
+
+  // *** hero
+  .hero {
+    .hero-center {
+      .hero-info {
+        h1 {
+          font-size: 4.5rem;
+          line-height: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* 1130px and below */
+@media only screen and (max-width: 1130px) {
+  // *** submenu2
+  .submenu2 {
+    top: 5.4rem;
+  }
+}
+
+/* 900px and below */
+@media only screen and (max-width: 900px) {
+  // *** nav
+  .nav {
+    height: 4rem;
+    background: $light-color;
+
+    .nav-center {
+      grid-template-columns: auto auto;
+      .nav-header {
+        order: 2;
+
+        .nav-logo {
+          img {
+            width: 110px;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+              brightness(102%) contrast(102%);
+          }
+        }
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .search-btn {
+        order: 1;
+        margin: 0;
+
+        img {
+          float: left;
+          width: 15px;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+            brightness(102%) contrast(102%);
+        }
+      }
+
+      .phone-number {
+        display: none;
+      }
+
+      .get-in-touch-btn {
+        display: none;
+      }
+    }
+
+    .toggle-btn {
+      display: block;
+    }
+  }
+
+  // *** mobile-contact
+  .mobile-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    color: $light-color;
+
+    .mobile-number {
+      background: $dark-color;
+      padding: 10px;
+
+      em {
+        font-style: normal;
+      }
+    }
+
+    .mobile-get-in-touch {
+      background: $dark-color;
+      padding: 10px;
+      font-weight: bold;
+
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // *** hero
+  .hero {
+    .hero-center {
+      .hero-info {
+        h1 {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+          max-width: 70vw;
+        }
+      }
+    }
+  }
+}
+
+/* 600px and below */
+@media only screen and (max-width: 600px) {
+  // *** mobile-contact
+  .mobile-contact {
+    .mobile-number {
+      font-size: $font-size;
+      em {
+        font-size: $font-size;
+      }
+    }
+
+    .mobile-get-in-touch {
+      font-size: $font-size;
+    }
+  }
+
+  // *** hero
+  .hero {
+    margin-top: -6.5rem;
+
+    .hero-center {
+      .hero-info {
+        margin-top: 25rem;
+
+        h1 {
+          font-size: 2.8rem;
+          line-height: 2.8rem;
+          max-width: 90vw;
+        }
+      }
+    }
+  }
+
+  // *** chat
+  .chat {
+    bottom: 20px;
+    right: 20px;
+  }
+}

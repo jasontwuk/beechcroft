@@ -1,0 +1,23 @@
+// *** font-family
+$main-font: "Roboto", Arial, Helvetica, sans-serif;
+$secondary-font: "Crimson Text", serif;
+
+// *** colors
+$light-color: #fff;
+$dark-color: #333;
+
+$dark-green: #4ca001;
+$green: #a0c85a;
+$orange: #ff7814;
+
+// *** other values
+$max-width: 1170px;
+$font-size: 0.8rem;
+$transition: all 0.3s linear;
+
+// *** display flex (Placeholder Selectors)
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,37 @@
+.hero {
+  min-height: 100vh;
+  margin-top: -9rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3)),
+    url(../img/content-images/hero.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .hero-center {
+    width: 90vw;
+    max-width: $max-width;
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: auto;
+    align-items: center;
+
+    .hero-info {
+      margin-top: 38rem;
+
+      h1 {
+        text-transform: none;
+        font-size: 5.4rem;
+        line-height: 5.4rem;
+        max-width: 60vw;
+        margin-bottom: 1rem;
+        color: $light-color;
+        font-family: $secondary-font;
+      }
+    }
+  }
+}
