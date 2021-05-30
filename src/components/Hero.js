@@ -1,4 +1,4 @@
-// image
+// *** image
 import arrow_right_icon from "../img/img/icon-arrow-right.svg";
 
 const Hero = () => {

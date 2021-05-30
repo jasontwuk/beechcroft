@@ -1,4 +1,4 @@
-// image
+// *** image
 import img1b from "../img/content-images/desktop-development-1.jpg";
 import img1s from "../img/content-images/mobile-development-1.jpg";
 import img2b from "../img/content-images/desktop-development-2.jpg";
@@ -46,7 +46,7 @@ export const MenuItem1 = [
     title: "The Farthings",
     subtitle: "AVAILABLE NOW",
     area: "Surrey",
-    address: "Leatherhead, Richmond,",
+    address: "Leatherhead, Surrey,",
     postcode: "KT22 7GP",
     info: "3 homes remaining from £840,000",
     path: "/",
@@ -76,6 +76,17 @@ export const MenuItem1 = [
     imgS: img2s,
   },
   {
+    title: "The Farthings",
+    subtitle: "AVAILABLE NOW",
+    area: "Hertfordshire",
+    address: "Leatherhead, Surrey,",
+    postcode: "KT22 7GP",
+    info: "3 homes remaining from £840,000",
+    path: "/",
+    imgB: img4b,
+    imgS: img4s,
+  },
+  {
     title: "Orford Place",
     subtitle: "COMING SOON",
     area: "Berkshire",
@@ -87,14 +98,47 @@ export const MenuItem1 = [
     imgS: img3s,
   },
   {
+    title: "Hampton Manor",
+    subtitle: "SPECIAL DEVELOPMENT",
+    area: "Berkshire",
+    address: "Godalming, Surrey,",
+    postcode: "GU7 2AS",
+    info: "5 homes remaining from £745,000",
+    path: "/",
+    imgB: img1b,
+    imgS: img1s,
+  },
+  {
     title: "The Farthings",
     subtitle: "AVAILABLE NOW",
-    area: "Kent",
-    address: "Leatherhead, Richmond,",
+    area: "Berkshire",
+    address: "Leatherhead, Surrey,",
     postcode: "KT22 7GP",
     info: "3 homes remaining from £840,000",
     path: "/",
     imgB: img4b,
     imgS: img4s,
+  },
+  {
+    title: "The Farthings",
+    subtitle: "AVAILABLE NOW",
+    area: "Kent",
+    address: "Leatherhead, Surrey,",
+    postcode: "KT22 7GP",
+    info: "3 homes remaining from £840,000",
+    path: "/",
+    imgB: img4b,
+    imgS: img4s,
+  },
+  {
+    title: "Orford Place",
+    subtitle: "COMING SOON",
+    area: "Kent",
+    address: "Ham Common, Richmond,",
+    postcode: "TW10 7JH",
+    info: "Launching April 2021",
+    path: "/",
+    imgB: img3b,
+    imgS: img3s,
   },
 ];

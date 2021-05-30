@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { MenuItem1 } from "./MenuItem1";
 import Submenu1 from "./Submenu1";
 import Submenu2 from "./Submenu2";
+import MobileMenu from "./MobileMenu";
 
 // *** image
 import logo from "../img/img/logo.svg";
@@ -10,6 +12,7 @@ import search_icon from "../img/img/icon-search.svg";
 
 const Nav = () => {
   const [click, setClick] = useState(false);
+  const [open, setOpen] = useState(false);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -18,11 +21,8 @@ const Nav = () => {
 
   const handleClick = () => {
     setClick(!click);
+    setOpen(!open);
   };
-
-  // const closeMobileMenu = () => {
-  //   setClick(false);
-  // };
 
   const onMouseEnter1 = () => {
     // console.log(menuRef1.current);
@@ -66,6 +66,18 @@ const Nav = () => {
     }
   };
 
+  // *** original area list (with duplicates)
+  const areaList = Array.from(MenuItem1, (item) => item.area);
+  // console.log(areaList);
+
+  // *** area list (without duplicates)
+  const newAreaList = [...new Set(areaList)];
+  // console.log(newAreaList);
+
+  const countOccurrences = (arr, val) =>
+    arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+  // console.log(countOccurrences(areaList, areaList[5]));
+
   return (
     <>
       <nav className="nav">
@@ -85,7 +97,13 @@ const Nav = () => {
               <Link to="/" className="link-btn">
                 <p>Homes for sale</p>
               </Link>
-              {dropdown1 && <Submenu1 />}
+              {dropdown1 && (
+                <Submenu1
+                  areaList={areaList}
+                  newAreaList={newAreaList}
+                  countOccurrences={countOccurrences}
+                />
+              )}
             </li>
             <li
               onMouseEnter={onMouseEnter2}
@@ -94,7 +112,7 @@ const Nav = () => {
               className="pos-relative"
             >
               <Link to="/" className="link-btn">
-                <p>Why Beechcroft</p>
+                <p>Why Beechcroft?</p>
               </Link>
               {dropdown && <Submenu2 />}
             </li>
@@ -127,22 +145,21 @@ const Nav = () => {
           </button>
         </div>
 
-        <div className="toggle-btn" onClick={handleClick}>
+        <div
+          className={click ? "toggle-btn active" : "toggle-btn"}
+          onClick={handleClick}
+        >
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
 
-        {/* <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/home-for-sale" className="nav-links">
-              Homes for sale <i className="fas fa-arrow-down" />
-            </Link>
-          </li>
-        </ul> */}
+        {open && (
+          <MobileMenu
+            areaList={areaList}
+            newAreaList={newAreaList}
+            countOccurrences={countOccurrences}
+          />
+        )}
+        {/* <MobileMenu /> */}
       </nav>
     </>
   );

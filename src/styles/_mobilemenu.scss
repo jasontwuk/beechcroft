@@ -1,0 +1,366 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/img/background-vector.svg);
+  background-color: $bg-green;
+  overflow-x: hidden;
+
+  .mobile-menu-level-1 {
+    transform: translateX(0%);
+    transition-duration: 0.3s;
+    overflow: hidden;
+
+    // *** for .mobile-menu-links to make this element take up remaining height
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    &.hide {
+      transform: translateX(-100%);
+    }
+
+    .mobile-menu-header {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+
+      // *** animation
+      position: relative;
+      animation: header_slide 0.3s forwards;
+      top: -25px;
+
+      @keyframes header_slide {
+        100% {
+          top: 0px;
+        }
+      }
+
+      .mobile-menu-number {
+        color: $light-color;
+
+        em {
+          font-style: normal;
+        }
+      }
+    }
+
+    .mobile-menu-links {
+      margin-top: 5rem;
+
+      // *** make this element take up remaining height
+      flex: 1 1 auto;
+      /* The above is shorthand for:
+        flex-grow: 1,
+        flex-shrink: 1,
+        flex-basis: auto
+        */
+
+      // *** animation
+      position: relative;
+      animation: header_menu 0.3s forwards;
+      top: 50px;
+
+      @keyframes header_menu {
+        100% {
+          top: 0px;
+        }
+      }
+
+      li {
+        padding: 10px 20px;
+
+        a {
+          p {
+            font-size: 1.5rem;
+            color: $light-color;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+
+            img {
+              transform: rotate(90deg);
+              width: 15px;
+            }
+          }
+
+          &.active {
+            p {
+              img {
+                transform: rotate(0deg);
+                transition-duration: 0.1s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.2rem;
+
+      img {
+        width: 15px;
+      }
+    }
+
+    .mobile-menu-btn-container {
+      // *** animation
+      position: relative;
+      animation: btn_1 0.3s forwards;
+      bottom: -50px;
+      left: 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+
+      @keyframes btn_1 {
+        100% {
+          bottom: 20px;
+        }
+      }
+
+      .mobile-menu-get-in-touch {
+        font-size: 1rem;
+        width: 68vw;
+        padding: 15px 0;
+        margin-left: 20px;
+      }
+
+      .mobile-chat {
+        margin-right: 20px;
+
+        .mobile-chat-btn {
+          padding: 1rem;
+          background: $dark-green;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+          -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+          transition: $transition;
+
+          // *** fix the display height
+          line-height: 0px;
+
+          &:hover {
+            background: darken($color: $dark-green, $amount: 10);
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu-level-2 {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    transform: translateX(0%);
+    transition-duration: 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &.hide {
+      transform: translateX(100%);
+    }
+
+    &.hide-left {
+      transform: translateX(-100%);
+    }
+
+    .level-2-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+
+      .level-2-arrow-icon {
+        background: transparent;
+        border: none;
+
+        img {
+          width: 13px;
+        }
+      }
+
+      .level-2-title {
+        color: $light-color;
+      }
+    }
+
+    .level-2-links {
+      li {
+        button {
+          background: transparent;
+          border: none;
+          width: 100%;
+          padding: 5px 20px;
+
+          h3 {
+            font-family: $secondary-font;
+            color: $light-color;
+            font-size: 2.5rem;
+            text-align: left;
+          }
+          p {
+            color: $green;
+            font-size: $font-size;
+          }
+        }
+      }
+    }
+
+    .level-2-footer {
+      margin-top: 40px;
+      padding: 0 20px;
+
+      a {
+        color: $light-color;
+        display: block;
+        text-decoration: underline;
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      button {
+        color: $light-color;
+        display: block;
+        text-decoration: underline;
+        background: transparent;
+        border: none;
+        margin-top: 10px;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+  .mobile-menu-level-3 {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    transform: translateX(0%);
+    transition-duration: 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+
+    &.hide {
+      transform: translateX(100%);
+    }
+
+    .level-3-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background: $bg-green;
+      z-index: 10;
+
+      .level-3-arrow-icon {
+        background: transparent;
+        border: none;
+
+        img {
+          width: 13px;
+        }
+      }
+
+      .level-3-title {
+        color: $light-color;
+        font-size: $font-size;
+        line-height: $font-size;
+
+        em {
+          font-style: normal;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    .mobile-house-list {
+      ul {
+        li {
+          margin: 30px;
+          position: relative;
+
+          .mobile-house {
+            img {
+              width: 100%;
+            }
+
+            .mobile-house-subtitle {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 5px 10px;
+              background: darken($color: $dark-color, $amount: 100);
+
+              p {
+                color: $light-color;
+                font-size: $font-size;
+              }
+            }
+            .mobile-house-info {
+              h3 {
+                font-family: $secondary-font;
+                font-size: 1.3rem;
+                line-height: 1.3rem;
+                color: $light-color;
+              }
+              h4 {
+                font-size: 1rem;
+                color: $light-color;
+                margin-top: 5px;
+              }
+              h5 {
+                font-size: 1rem;
+                color: $orange;
+              }
+              a {
+                color: $light-color;
+                display: block;
+                margin-top: 5px;
+
+                img {
+                  width: 10px;
+                  margin-left: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

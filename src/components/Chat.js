@@ -1,4 +1,4 @@
-// image
+// *** image
 import chat_icon from "../img/img/icon-chat.svg";
 
 const Chat = () => {

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 
-// components
+// *** components
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Chat from "./components/Chat";
