@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/beechcroft/static/css/main.656f8e38.chunk.css",
+    "main.js": "/beechcroft/static/js/main.1ce02bea.chunk.js",
+    "main.js.map": "/beechcroft/static/js/main.1ce02bea.chunk.js.map",
+    "runtime-main.js": "/beechcroft/static/js/runtime-main.f2787e3a.js",
+    "runtime-main.js.map": "/beechcroft/static/js/runtime-main.f2787e3a.js.map",
+    "static/js/2.46f3b19f.chunk.js": "/beechcroft/static/js/2.46f3b19f.chunk.js",
+    "static/js/2.46f3b19f.chunk.js.map": "/beechcroft/static/js/2.46f3b19f.chunk.js.map",
+    "index.html": "/beechcroft/index.html",
+    "static/css/main.656f8e38.chunk.css.map": "/beechcroft/static/css/main.656f8e38.chunk.css.map",
+    "static/js/2.46f3b19f.chunk.js.LICENSE.txt": "/beechcroft/static/js/2.46f3b19f.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/beechcroft/static/media/hero.d7109dcc.jpg",
+    "static/media/desktop-development-1.3f2616af.jpg": "/beechcroft/static/media/desktop-development-1.3f2616af.jpg",
+    "static/media/desktop-development-2.e792b4cb.jpg": "/beechcroft/static/media/desktop-development-2.e792b4cb.jpg",
+    "static/media/desktop-development-3.79f27002.jpg": "/beechcroft/static/media/desktop-development-3.79f27002.jpg",
+    "static/media/desktop-development-4.e6538b55.jpg": "/beechcroft/static/media/desktop-development-4.e6538b55.jpg",
+    "static/media/icon-arrow-left.44c8947f.svg": "/beechcroft/static/media/icon-arrow-left.44c8947f.svg",
+    "static/media/icon-arrow-right.9bd3b837.svg": "/beechcroft/static/media/icon-arrow-right.9bd3b837.svg",
+    "static/media/icon-chat.ea85adc6.svg": "/beechcroft/static/media/icon-chat.ea85adc6.svg",
+    "static/media/icon-search.71bbcb81.svg": "/beechcroft/static/media/icon-search.71bbcb81.svg",
+    "static/media/logo.339b2dae.svg": "/beechcroft/static/media/logo.339b2dae.svg",
+    "static/media/mobile-development-1.7b94fe1e.jpg": "/beechcroft/static/media/mobile-development-1.7b94fe1e.jpg",
+    "static/media/mobile-development-2.e7725a67.jpg": "/beechcroft/static/media/mobile-development-2.e7725a67.jpg",
+    "static/media/mobile-development-3.c8f92247.jpg": "/beechcroft/static/media/mobile-development-3.c8f92247.jpg",
+    "static/media/mobile-development-4.8a5a5f43.jpg": "/beechcroft/static/media/mobile-development-4.8a5a5f43.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2787e3a.js",
+    "static/js/2.46f3b19f.chunk.js",
+    "static/css/main.656f8e38.chunk.css",
+    "static/js/main.1ce02bea.chunk.js"
+  ]
+}
