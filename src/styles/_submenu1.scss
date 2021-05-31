@@ -14,7 +14,9 @@
 
   ol {
     display: flex;
-    margin: 0 1rem;
+    position: fixed;
+    left: 2.1rem;
+    top: 8.2rem;
 
     li {
       display: inline-block;
@@ -26,7 +28,7 @@
         cursor: pointer;
         font-size: $font-size;
         font-weight: bold;
-        padding: 2rem 0 5px;
+        padding: 5px 5px 3px;
         border-bottom: 2px solid $light-color;
 
         &:hover {
@@ -43,6 +45,7 @@
 
   ul {
     display: flex;
+    margin-top: 2.8rem;
 
     li {
       display: inline-block;
