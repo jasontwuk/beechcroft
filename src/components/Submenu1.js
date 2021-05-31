@@ -82,7 +82,7 @@ const Submenu1 = ({ areaList, newAreaList, countOccurrences }) => {
           return (
             <li key={index}>
               <div className="house">
-                <Link to={item.path} onClick={() => setClick(false)}>
+                <Link to={item.house_path} onClick={() => setClick(false)}>
                   <img src={item.imgB} alt={item.title} />
 
                   <div className="house-subtitle">
@@ -90,7 +90,6 @@ const Submenu1 = ({ areaList, newAreaList, countOccurrences }) => {
                   </div>
                   <div className="house-info">
                     <h3>{item.title}</h3>
-                    <h4>{item.address}</h4>
                     <h4>{item.postcode}</h4>
                     <h5>{item.info}</h5>
                     <div className="explore-btn">
@@ -99,6 +98,10 @@ const Submenu1 = ({ areaList, newAreaList, countOccurrences }) => {
                     </div>
                   </div>
                 </Link>
+
+                <div className="location-link">
+                  <Link to={item.location_path}>{item.location}</Link>
+                </div>
               </div>
             </li>
           );

@@ -212,10 +212,14 @@ const MobileMenu = ({ areaList, newAreaList, countOccurrences }) => {
                     <div className="mobile-house-info">
                       <h3>{item.title}</h3>
                       <h4>
-                        {item.address} {item.postcode}
+                        <Link to={item.location_path}>{item.location}</Link>{" "}
+                        {item.postcode}
                       </h4>
                       <h5>{item.info}</h5>
-                      <Link to={item.path} onClick={() => setClick(false)}>
+                      <Link
+                        to={item.house_path}
+                        onClick={() => setClick(false)}
+                      >
                         Explore{" "}
                         <img src={arrow_right_icon} alt="arrow right icon" />
                       </Link>

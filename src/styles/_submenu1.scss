@@ -50,9 +50,9 @@
     li {
       display: inline-block;
       padding: 2rem 0 3rem;
+      position: relative;
 
       .house {
-        color: $dark-color;
         font-size: $font-size;
         margin: 0 1rem;
         display: block;
@@ -64,8 +64,8 @@
 
         .house-subtitle {
           position: absolute;
-          top: 1.5rem;
-          left: 1.5rem;
+          top: 1.2rem;
+          left: 1.2rem;
           background: $dark-color;
           color: $light-color;
 
@@ -81,7 +81,7 @@
           left: 0;
           width: 100%;
           height: auto;
-          padding: 20px;
+          padding: 1.2rem;
           background: rgb(0, 0, 0);
           background: linear-gradient(
             0deg,
@@ -97,6 +97,7 @@
           }
 
           h4 {
+            margin-top: 1rem;
             padding: 0;
             font-size: 1.1rem;
             font-family: $secondary-font;
@@ -126,6 +127,24 @@
             img {
               width: 10px;
               margin-left: 5px;
+            }
+          }
+        }
+
+        .location-link {
+          padding: 1.2rem;
+          position: absolute;
+          bottom: 7.2rem;
+
+          a {
+            padding: 0;
+            font-size: 1.1rem;
+            font-family: $secondary-font;
+            color: $light-color;
+            text-decoration: underline;
+
+            &:hover {
+              color: $green;
             }
           }
         }

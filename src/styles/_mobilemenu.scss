@@ -342,6 +342,11 @@
                 font-size: 1rem;
                 color: $light-color;
                 margin-top: 5px;
+
+                a {
+                  text-decoration: underline;
+                  display: inline-block;
+                }
               }
               h5 {
                 font-size: 1rem;
